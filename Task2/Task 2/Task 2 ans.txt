@@ -1,0 +1,31 @@
+import cv2
+import matplotlib.pyplot as plt
+
+img_task2 = cv2.imread(r"C:\Users\aamin\OneDrive\Desktop\DCIT412 Assignment 2\Task 2\thebeach.jpeg")
+gray_img_task2 = cv2.cvtColor(img_task2,cv2.COLOR_BGR2GRAY)
+hsv_img_task2 = cv2.cvtColor(img_task2,cv2.COLOR_BGR2HSV)
+lab_img_task2 = cv2.cvtColor(img_task2,cv2.COLOR_BGR2LAB)
+cv2.imshow("Original Image 2", img_task2)
+cv2.imshow("Gray Image 2", gray_img_task2)
+cv2.imshow("HSV Image 2", hsv_img_task2)
+cv2.imshow("Lab Image 2", lab_img_task2)
+cv2.imwrite(r"C:\Users\aamin\OneDrive\Desktop\DCIT412 Assignment 2\Task 2\photo_grayscale.jpeg", gray_img_task2)
+True
+cv2.imwrite(r"C:\Users\aamin\OneDrive\Desktop\DCIT412 Assignment 2\Task 2\photo_hsv.jpeg", hsv_img_task2)
+True
+cv2.imwrite(r"C:\Users\aamin\OneDrive\Desktop\DCIT412 Assignment 2\Task 2\photo_lab.jpeg", lab_img_task2)
+True
+
+plt.figure()
+<Figure size 640x480 with 0 Axes>
+plt.title("Grayscale Histogram")
+Text(0.5, 1.0, 'Grayscale Histogram')
+plt.xlabel("Pixel Intensity")
+Text(0.5, 0, 'Pixel Intensity')
+plt.ylabel("Number of Pixels")
+Text(0, 0.5, 'Number of Pixels')
+plt.plot(cv2.calcHist([gray_img_task2], [0], None, [256], [0, 256]).ravel())
+[<matplotlib.lines.Line2D object at 0x0000020F613847D0>]
+
+plt.show()
+
