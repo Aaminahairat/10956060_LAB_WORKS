@@ -1,0 +1,7 @@
+import cv2
+img = cv2.imread(r"C:\Users\aamin\OneDrive\Desktop\DCIT412 Assignment 2\Task 1\friendship.jpeg")
+gray_img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+cv2.imshow("Original Image", img)
+cv2.imshow('Gray Image', gray_img)
+cv2.imwrite(r"C:\Users\aamin\OneDrive\Desktop\DCIT412 Assignment 2\Task 1\photo_gray.jpeg", gray_img)
+True
