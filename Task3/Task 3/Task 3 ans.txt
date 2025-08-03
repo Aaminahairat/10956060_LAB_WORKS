@@ -1,0 +1,2 @@
+Task 3 ans
+A pixel with a value of 180 will have a new value of 255 after applying binary thresholding with a threshold of 150. This is because 180 is greater than the threshold of 150, and the rule for binary thresholding dictates that pixels above the threshold are set to the maximum value, which in this case is 255.
